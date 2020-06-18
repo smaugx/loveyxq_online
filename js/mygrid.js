@@ -4,7 +4,7 @@ var windowPath = window.location.pathname;
 var imgDataPath_photo = '/photos/photoslist.json'; 
 var imgDataPath_dolls = '/dolls/photoslist.json'; 
 // 图片显示数量
-var imgMaxNum = 50; 
+var imgMaxNum = 5000; 
 // 获取窗口宽度（以确定图片显示宽度）
 var windowWidth = window.innerWidth
 || document.documentElement.clientWidth
