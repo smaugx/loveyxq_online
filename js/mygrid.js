@@ -1,7 +1,8 @@
 // 获取网页不含域名的路径
 var windowPath = window.location.pathname; 
 // 图片信息文件路径
-var imgDataPath = '/photos/photoslist.json'; 
+var imgDataPath_photo = '/photos/photoslist.json'; 
+var imgDataPath_dolls = '/dolls/photoslist.json'; 
 // 图片显示数量
 var imgMaxNum = 50; 
 // 获取窗口宽度（以确定图片显示宽度）
@@ -17,9 +18,16 @@ if (windowWidth < 768) {
 var imgStyle = '!' + imageWidth + 'x';
 
 
+var LinkDataPath = ''; // 图片路径
+
 // 图片卡片（照片页面）
 if (windowPath.indexOf('photos') > 0 ) {
-    var LinkDataPath = imgDataPath;
+    LinkDataPath = imgDataPath_photo;
+} else if (windowPath.indexOf('dolls') > 0 ) {
+    LinkDataPath = imgDataPath_dolls;
+}
+
+if (LinkDataPath) {
     photo = {
         page: 1,
         offset: imgMaxNum,
